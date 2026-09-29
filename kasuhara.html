@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小さなお店のカスハラ対応マニュアル作成｜書類のてもと屋さん</title>
+<meta name="description" content="2026年10月からカスハラ対策が事業主の義務に。飲食店・美容室・小売店など小さなお店向けに、印刷してそのままスタッフに渡せるカスハラ対応マニュアルを作成します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F4D3A;--ink-soft:#44604F;--paper:#F4F8F5;--card:#FFFFFF;--line:#D3E2D8;
+  --accent:#B94A28;--on-accent:#FFFFFF;--yellow:#F2C230;--on-yellow:#1E3A5F;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E3EFE7;--ink-soft:#B3C9BB;--paper:#12211A;--card:#1B2E25;--line:#2D4639;
+    --accent:#E0775A;--on-accent:#12211A;--yellow:#F2C230;--on-yellow:#1E3A5F;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E3EFE7;--ink-soft:#B3C9BB;--paper:#12211A;--card:#1B2E25;--line:#2D4639;
+  --accent:#E0775A;--on-accent:#12211A;--yellow:#F2C230;--on-yellow:#1E3A5F;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:500;font-size:16px;line-height:1.85}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:900;font-size:18px;text-decoration:none}
+.btn-line{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--on-yellow);font-weight:900;text-decoration:none;border-radius:999px;padding:10px 18px;font-size:15px;min-height:44px}
+
+.hero{padding:40px 0 48px}
+.notice{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:900;font-size:14px;border-radius:6px;padding:4px 12px;margin-bottom:16px}
+.hero h1{font-size:clamp(28px,7.4vw,44px);line-height:1.4;font-weight:900;margin:0 0 18px}
+.hero p{margin:0 0 26px;color:var(--ink-soft);font-size:17px;max-width:32em}
+
+/* the memorable element: a printed manual with a price tag */
+.manual{position:relative;max-width:440px;margin:36px auto 0;background:#FFFFFF;color:#1F4D3A;border-radius:4px;padding:28px 28px 22px;box-shadow:10px 10px 0 #C9DCCF, 20px 20px 0 #B3CDBB}
+.manual .staple{position:absolute;top:14px;left:18px;width:26px;height:6px;border-radius:3px;background:#9AA7A0}
+.manual .mtitle{font-weight:900;font-size:20px;border-bottom:3px solid #1F4D3A;padding:8px 0 8px;margin-bottom:8px}
+.manual ol{margin:0;padding-left:1.6em;font-size:15px;font-weight:700;line-height:2.05}
+.manual ol li::marker{color:#B94A28;font-weight:900}
+.tag{position:absolute;right:-12px;top:-22px;background:#B94A28;color:#FFFFFF;border-radius:10px;padding:8px 14px;transform:rotate(4deg);text-align:center;line-height:1.3}
+.tag small{display:block;font-size:12px;font-weight:700}
+.tag strong{font-size:24px;font-weight:900}
+
+section{padding:50px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(23px,6vw,30px);font-weight:900;line-height:1.45;margin:0 0 20px}
+.muted{color:var(--ink-soft)}
+
+.worries{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.worries li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-weight:700}
+
+.uses{display:grid;gap:14px}
+@media (min-width:640px){.uses{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.use{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.use strong{display:block;font-size:18px;font-weight:900;margin-bottom:4px}
+.use span{font-size:15px;color:var(--ink-soft)}
+
+.price{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:26px 24px}
+.price .limit{font-weight:900;color:var(--accent)}
+.price .num{font-size:52px;font-weight:900;line-height:1.2}
+.price .num span{font-size:22px}
+.price .after{font-size:15px;color:var(--ink-soft);margin:4px 0 16px}
+.price dl{display:grid;grid-template-columns:6em 1fr;gap:6px 12px;margin:0;font-size:15px}
+.price dt{font-weight:900}
+.price dd{margin:0}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:18px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-weight:900;font-size:20px}
+.steps strong{display:block;font-size:18px;font-weight:900}
+.steps span{color:var(--ink-soft);font-size:15px}
+
+.maker{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.maker p{margin:0 0 12px}
+.maker p:last-child{margin:0}
+
+.cant{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:15px;margin-top:22px}
+.cant ul{margin:8px 0 0;padding-left:1.2em}
+
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font-weight:900;font-size:17px;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:10px;height:10px;border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:translateY(-70%) rotate(45deg);transition:transform .2s ease}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{margin:0 0 18px;color:var(--ink-soft);font-size:15px}
+
+.final{text-align:center;padding:58px 0 64px}
+.final p{margin:0 auto 24px;max-width:28em}
+.final .btn-line{font-size:18px;padding:16px 28px;min-height:56px}
+.final .alt{display:block;margin-top:18px;font-size:14px;color:var(--ink-soft)}
+
+footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:13px;color:var(--ink-soft)}
+footer strong{color:var(--ink);font-size:15px}
+</style>
+<link rel="canonical" href="https://reenn0426-jpg.github.io/temotoya/kasuhara.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="書類のてもと屋さん">
+<meta property="og:title" content="小さなお店のカスハラ対応マニュアル作成｜書類のてもと屋さん">
+<meta property="og:description" content="2026年10月からカスハラ対策が事業主の義務に。飲食店・美容室・小売店など小さなお店向けに、印刷してそのままスタッフに渡せるカスハラ対応マニュアルを作成します。">
+<meta property="og:url" content="https://reenn0426-jpg.github.io/temotoya/kasuhara.html">
+<meta property="og:image" content="https://reenn0426-jpg.github.io/temotoya/hero.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "カスハラ対応マニュアル作成", "serviceType": "カスタマーハラスメント対応マニュアル作成", "provider": {"@type": "ProfessionalService", "name": "書類のてもと屋さん", "url": "https://reenn0426-jpg.github.io/temotoya/"}, "areaServed": {"@type": "Country", "name": "日本"}, "url": "https://reenn0426-jpg.github.io/temotoya/kasuhara.html", "description": "2026年10月からカスハラ対策が事業主の義務に。飲食店・美容室・小売店など小さなお店向けに、印刷してそのままスタッフに渡せるカスハラ対応マニュアルを作成します。", "offers": {"@type": "Offer", "price": "8000", "priceCurrency": "JPY", "priceValidUntil": "2026-10-31", "availability": "https://schema.org/InStock"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "スタッフが2〜3人の小さなお店でも必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "法律上、規模に関係なく対策が求められています。小さなお店ほど一人で抱え込みやすいので、「困ったらこうする」を決めておくだけでも、スタッフの安心につながります。"}}, {"@type": "Question", "name": "どんな業種でも対応できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。お客様や取引先と接するお仕事であれば、業種に合わせた具体例と対応をお作りします。"}}, {"@type": "Question", "name": "京都以外のお店でも頼めますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。やり取りはLINEとデータで完結するので、全国どこからでもご依頼いただけます。"}}, {"@type": "Question", "name": "作ったあとに見直しもお願いできますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。実際に使ってみて気になったところの修正や、スタッフ研修用の資料づくりもご相談ください。"}}]}]</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">書類のてもと屋さん</a>
+    <a class="btn-line" href="https://lin.ee/o2bRUeE" target="_blank" rel="noopener">LINEで相談</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="notice">2026年10月から、カスハラ対策が事業主の義務に</div>
+    <h1>小さなお店のための<br>カスハラ対応マニュアル、<br>作ります。</h1>
+    <p>飲食店、美容室、小売店、介護の現場など、お客様と接するお仕事に。印刷してそのままスタッフさんに渡せる、これ1冊で完結するマニュアルをお届けします。</p>
+    <a class="btn-line" href="https://lin.ee/o2bRUeE" target="_blank" rel="noopener" style="font-size:17px;padding:14px 24px;min-height:52px">LINEで相談する</a>
+
+    <div class="manual" aria-label="マニュアルの目次の例">
+      <div class="staple"></div>
+      <div class="tag"><small>10月31日まで</small><strong>8,000円</strong></div>
+      <div class="mtitle">カスハラ対応マニュアル 目次</div>
+      <ol>
+        <li>カスハラに対する基本方針</li>
+        <li>業種に合わせたカスハラの具体例</li>
+        <li>対応の流れと引き継ぎ</li>
+        <li>対応を打ち切る目安</li>
+        <li>その場で使える声かけ例</li>
+        <li>スタッフの相談窓口</li>
+        <li>対応後の記録シート</li>
+        <li>お客様向けの掲示文</li>
+      </ol>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>こんなお店に</h2>
+      <ul class="worries">
+        <li>義務化と聞いたけど、うちみたいな小さなお店も必要なの？</li>
+        <li>何から手をつければいいか分からない</li>
+        <li>ネットのひな形は大企業向けで、うちの現場に合わない</li>
+        <li>スタッフがひとりで困った対応を抱え込まないようにしたい</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>印刷して、そのまま渡せる</h2>
+      <p class="muted" style="margin:0 0 20px">PDFとPNGでお渡しするので、届いたその日から使えます。</p>
+      <div class="uses">
+        <div class="use"><strong>スタッフに配る</strong><span>A4で印刷して、全員に1部ずつ。</span></div>
+        <div class="use"><strong>休憩室に貼る</strong><span>いざというとき、すぐ目に入る場所に。</span></div>
+        <div class="use"><strong>スマホで見返す</strong><span>PNGなら写真フォルダにも入れておけます。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="price">
+    <div class="wrap">
+      <h2>料金</h2>
+      <div class="price">
+        <div class="limit">10月31日までのオープン記念価格</div>
+        <div class="num">8,000<span>円</span></div>
+        <div class="after">11月1日からは15,000円になります。</div>
+        <dl>
+          <dt>お届け</dt><dd>7日ほど（お急ぎはご相談ください）</dd>
+          <dt>無料修正</dt><dd>2回まで</dd>
+          <dt>納品</dt><dd>PDF・PNG</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>ご依頼の流れ</h2>
+      <ol class="steps">
+        <li><div><strong>LINEで相談</strong><span>業種とスタッフの人数を教えてください。</span></div></li>
+        <li><div><strong>ヒアリングシートに回答</strong><span>これまでの困りごとも、差し支えない範囲で。</span></div></li>
+        <li><div><strong>たたき台をお届け</strong><span>お店の現場に合わせて一から作ります。修正は2回まで無料です。</span></div></li>
+        <li><div><strong>PDF・PNGで納品</strong><span>印刷してすぐに使えます。</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>作る人</h2>
+      <div class="maker">
+        <p>美容室を23年経営してきました。理不尽な要求や長時間のクレームに、スタッフと一緒に向き合ってきた経験があります。</p>
+        <p>だからこそ、きれいごとではなく「その場でどう動くか」が分かるマニュアルを作ります。これまでに3件のカスハラ対応マニュアルを作成しました。</p>
+      </div>
+      <div class="cant">
+        <strong>ご注意</strong>
+        <ul>
+          <li>厚生労働省の指針やマニュアルを参考に作成しますが、法令への適合を保証するものではありません。</li>
+          <li>就業規則の作成・変更や、労働基準監督署への届出は社会保険労務士の業務のため、お引き受けできません。</li>
+          <li>個別のトラブルに対する法的な判断や交渉は、弁護士へのご相談をおすすめします。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>よくある質問</h2>
+      <details>
+        <summary>スタッフが2〜3人の小さなお店でも必要ですか？</summary>
+        <p>法律上、規模に関係なく対策が求められています。小さなお店ほど一人で抱え込みやすいので、「困ったらこうする」を決めておくだけでも、スタッフの安心につながります。</p>
+      </details>
+      <details>
+        <summary>どんな業種でも対応できますか？</summary>
+        <p>はい。お客様や取引先と接するお仕事であれば、業種に合わせた具体例と対応をお作りします。</p>
+      </details>
+      <details>
+        <summary>京都以外のお店でも頼めますか？</summary>
+        <p>はい。やり取りはLINEとデータで完結するので、全国どこからでもご依頼いただけます。</p>
+      </details>
+      <details>
+        <summary>作ったあとに見直しもお願いできますか？</summary>
+        <p>はい。実際に使ってみて気になったところの修正や、スタッフ研修用の資料づくりもご相談ください。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="final" id="line">
+    <div class="wrap">
+      <h2>まずはLINEで気軽にどうぞ</h2>
+      <p class="muted">「うちの業種でもできる？」だけでも大丈夫です。平日の日中にお返事します。</p>
+      <a class="btn-line" href="https://lin.ee/o2bRUeE" target="_blank" rel="noopener">LINEで相談する</a>
+      <a class="alt" href="https://coconala.com/services/4425352">ココナラからのご依頼も受け付けています</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>書類のてもと屋さん</strong><br>
+    京都府京都市右京区京北<br>
+    小さな会社・お店の書類とWebのお手伝い
+    <br><a href="tokusho.html">特定商取引法に基づく表記</a>
+  </div>
+</footer>
+</body>
+</html>

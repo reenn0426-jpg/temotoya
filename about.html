@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>てもと屋さんのふたり｜書類のてもと屋さん</title>
+<meta name="description" content="京都・京北に暮らす夫婦でやっている、一人親方さんのための書類とWebのお手伝い。書類のてもと屋さんのふたりをご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1E3A5F;--ink-soft:#3F5573;--paper:#F7F8F6;--card:#FFFFFF;--line:#DCE1E6;
+  --yellow:#F2C230;--wood:#B9824A;--photo:#E3E7EC;--on-yellow:#1E3A5F;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E6ECF3;--ink-soft:#B5C1CF;--paper:#14202E;--card:#1C2B3C;--line:#2F4257;
+    --yellow:#F2C230;--wood:#C99260;--photo:#26374A;--on-yellow:#1E3A5F;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6ECF3;--ink-soft:#B5C1CF;--paper:#14202E;--card:#1C2B3C;--line:#2F4257;
+  --yellow:#F2C230;--wood:#C99260;--photo:#26374A;--on-yellow:#1E3A5F;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:500;font-size:16px;line-height:1.9}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:900;font-size:18px;text-decoration:none}
+.btn-line{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--on-yellow);font-weight:900;text-decoration:none;border-radius:999px;padding:10px 18px;font-size:15px;min-height:44px}
+
+.photo{background:var(--photo);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-soft);font-size:14px;font-weight:700;text-align:center;padding:16px}
+
+.hero{padding:40px 0 48px}
+.hero h1{font-size:clamp(28px,7.5vw,42px);font-weight:900;line-height:1.4;margin:0 0 20px}
+.hero .photo{aspect-ratio:4/3;margin-bottom:24px}
+.hero p{margin:0 0 14px;max-width:34em}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(23px,6vw,29px);font-weight:900;line-height:1.45;margin:0 0 22px}
+.muted{color:var(--ink-soft)}
+
+/* business cards — the memorable element on this page */
+.cards{display:grid;gap:22px}
+@media (min-width:660px){.cards{grid-template-columns:1fr 1fr}}
+.meishi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0;overflow:hidden;box-shadow:0 1px 0 var(--line),0 8px 0 -4px var(--card),0 8px 0 -3px var(--line)}
+.meishi .band{height:10px;background:var(--yellow)}
+.meishi .inner{padding:22px 22px 20px}
+.meishi .role{font-size:13px;font-weight:700;color:var(--ink-soft)}
+.meishi .name{font-size:26px;font-weight:900;margin:2px 0 14px;letter-spacing:.06em}
+.meishi .face{width:88px;height:88px;border-radius:50%;float:right;margin:0 0 8px 12px;font-size:12px;padding:8px}
+.meishi dl{margin:0;display:grid;grid-template-columns:5.2em 1fr;gap:6px 10px;font-size:15px;clear:both}
+.meishi dt{font-weight:900}
+.meishi dd{margin:0;color:var(--ink-soft)}
+.meishi .quote{margin:16px 0 0;padding-top:14px;border-top:1px dashed var(--line);font-size:15px}
+
+.life{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin:22px 0}
+.life .photo{aspect-ratio:1/1}
+
+.promise{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.promise li{padding-left:18px;border-left:4px solid var(--yellow)}
+.promise strong{display:block;font-size:18px;font-weight:900}
+.promise span{color:var(--ink-soft);font-size:15px}
+
+.final{text-align:center;padding:56px 0 64px}
+.final p{margin:0 auto 24px;max-width:28em}
+.final .btn-line{font-size:18px;padding:16px 28px;min-height:56px}
+.final .back{display:block;margin-top:18px;font-size:14px;color:var(--ink-soft)}
+
+footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:13px;color:var(--ink-soft)}
+footer strong{color:var(--ink);font-size:15px}
+</style>
+<link rel="canonical" href="https://reenn0426-jpg.github.io/temotoya/about.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="書類のてもと屋さん">
+<meta property="og:title" content="てもと屋さんのふたり｜書類のてもと屋さん">
+<meta property="og:description" content="京都・京北に暮らす夫婦でやっている、一人親方さんのための書類とWebのお手伝い。書類のてもと屋さんのふたりをご紹介します。">
+<meta property="og:url" content="https://reenn0426-jpg.github.io/temotoya/about.html">
+<meta property="og:image" content="https://reenn0426-jpg.github.io/temotoya/hero.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">書類のてもと屋さん</a>
+    <a class="btn-line" href="https://lin.ee/o2bRUeE" target="_blank" rel="noopener">LINEで相談</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>はじめまして。<br>てもと屋さんのふたりです。</h1>
+    <div class="photo" role="img" aria-label="ふたりの写真が入ります">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+      ふたりの写真（古民家の前や縁側など）
+    </div>
+    <p>京都・京北の山あいで、夫婦ふたりで「書類のてもと屋さん」をやっています。</p>
+    <p>夫は、建設会社で働く現役の施工管理技士。妻は、23年間お店を経営してきた元美容師です。業種は違っても、「本業の合間に書類に追われる大変さ」はふたりともよく知っています。</p>
+    <p>だからこそ、親方さんには現場に集中してほしい。書類のことは、そっと横で支える「手元」として引き受けます。</p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>ふたりの名刺</h2>
+      <div class="cards">
+        <div class="meishi">
+          <div class="band"></div>
+          <div class="inner">
+            <div class="photo face" role="img" aria-label="夫の写真が入ります">写真</div>
+            <div class="role">書類をつくる人</div>
+            <div class="name">まさや</div>
+            <dl>
+              <dt>資格</dt><dd>2級土木施工管理技士</dd>
+              <dt>経験</dt><dd>建設会社で現場経験7年</dd>
+              <dt>担当</dt><dd>安全書類、小規模な河川・土木工事の施工計画書</dd>
+              <dt>人柄</dt><dd>口数は少なめ、書類はていねい</dd>
+              <dt>好きなこと</dt><dd>【趣味を入れてください】</dd>
+            </dl>
+            <p class="quote">【ひとこと例：現場の大変さは分かっているつもりです。書類は任せてください。】</p>
+          </div>
+        </div>
+        <div class="meishi">
+          <div class="band"></div>
+          <div class="inner">
+            <div class="photo face" role="img" aria-label="妻の写真が入ります">写真</div>
+            <div class="role">窓口の人</div>
+            <div class="name">けいこ</div>
+            <dl>
+              <dt>経歴</dt><dd>大阪・心斎橋で美容室を23年経営</dd>
+              <dt>担当</dt><dd>ご相談の窓口、ホームページ・求人ページ制作</dd>
+              <dt>得意</dt><dd>話を聞くこと、スマホ操作のご案内</dd>
+              <dt>好きなこと</dt><dd>山菜採り、発酵づくり、狩猟</dd>
+            </dl>
+            <p class="quote">お店をやっていた頃、届出や書類は全部自分でやってきました。分からないことは、何度でも気軽に聞いてくださいね。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>京北での暮らし</h2>
+      <p>古民家に暮らしはじめて6年。山で山菜を採り、畑を耕し、発酵食品をつくる毎日です。</p>
+      <div class="life">
+        <div class="photo" role="img" aria-label="古民家の写真が入ります">古民家の写真</div>
+        <div class="photo" role="img" aria-label="山や畑の写真が入ります">山や畑の写真</div>
+      </div>
+      <p class="muted">山の暮らしも現場の仕事も、段取りがいちばん大事。書類づくりも、同じ気持ちで向き合っています。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>てもと屋さんの約束</h2>
+      <ul class="promise">
+        <li><strong>現場の言葉で話します</strong><span>施工管理技士の夫が作るので、専門用語もそのまま通じます。</span></li>
+        <li><strong>お返事は早めに</strong><span>窓口の妻が、平日の日中にすぐお返事します。</span></li>
+        <li><strong>分からないことは何度でも</strong><span>書類の書き方も、スマホの使い方も、ひとつずつご案内します。</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>まずは気軽に話しかけてください</h2>
+      <p class="muted">「こんなことも頼める？」だけでも大丈夫です。</p>
+      <a class="btn-line" href="https://lin.ee/o2bRUeE" target="_blank" rel="noopener">LINEで相談する</a>
+      <a class="back" href="index.html">トップページにもどる</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>書類のてもと屋さん</strong><br>
+    京都府京都市右京区京北<br>
+    一人親方さん・小さな建設会社さんの書類とWebのお手伝い
+    <br><a href="tokusho.html">特定商取引法に基づく表記</a>
+  </div>
+</footer>
+</body>
+</html>
